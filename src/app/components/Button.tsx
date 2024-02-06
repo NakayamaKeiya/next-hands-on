@@ -1,8 +1,6 @@
-import { Children } from "react"
+import { Children, ComponentPropsWithoutRef } from "react"
 
-type Props = {
-    children: React.ReactNode
-}
+type Props = Omit<ComponentPropsWithoutRef<'button'>, 'className'>
 
 const Button = ({children, ...rest}: Props) => {
     return(
